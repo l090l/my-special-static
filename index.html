@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    body{
+        background: #000;
+        color:#fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .hidden {
+      display: none;
+    }
+    .visibility {
+        display: block;
+    }
+    #main{
+        --bg-overlay-color: transparent;
+        --bg-gradient: none;
+        min-width: 980px;
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        /* margin: 0px 0px 0 calc((100% - 980px)* 0.5); */
+        grid-area: 1 / 1 / 2 / 2;
+        justify-self: start;
+        align-self: start;
+    }
+    #h1Title {
+        letter-spacing: 0.1em;
+        height: auto;
+        position: relative;
+        justify-self: start;
+        align-self: start;
+        line-height: 1.1em;
+        text-align: center;
+        font-size: 80px;
+        line-height: 1.1em;
+    }
+    #content {
+        letter-spacing: 0.1em;
+        height: auto;
+        position: relative;
+        justify-self: start;
+        align-self: start;
+        line-height: 1.1em;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.1em;
+    }
+    #content div{
+        padding: 0.5%;
+    }
+    #content #button {
+        width: 150px;
+        background-color: rgb(135 177 222);
+        position: relative;
+        margin: 0px 0px 64px calc((100% - 980px)* 0.5);
+        left: 419px;
+        grid-area: 5 / 1 / 6 / 2;
+        justify-self: start;
+        align-self: start;
+    }
+    #content div a {
+        cursor: pointer !important;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: var(--label-align);
+        min-width: 100%;
+        text-align: initial;
+        width: -moz-max-content;
+        width: max-content;
+        touch-action: manipulation;
+    }
+    input {
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    </style>
+<head>
+<title>Special to You</title>
+</head>
+<body>
+<section id="main">
+    <h1 id="h1Title">
+        <span>Unexpected Expectable</span>
+    </h1>
+    <div id="content">
+        <div><span>TYPE IN SECRET KEY</span></div>
+        <div>
+            <input type="text" id="name" name="name" required size="50" />
+        </div>
+        <div id="button">
+            <a onclick="nameElement()">Show!</a>
+        </div>
+        <div id="myDIV">
+            <iframe src="https://drive.google.com/file/d/1LXjDChvJQ1dgyL6nIwgvYR8Wq-0hIoFP/preview" width="640" height="480"></iframe>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    function nameElement() {
+  if (document.getElementById("name").value == "Good") {
+    const element = document.getElementById("myDIV");
+    if (element.className == "hidden") {
+        element.className = "visibility";
+    } else {}
+  };
+}
+</script>
+
+</body>
+</html>
+

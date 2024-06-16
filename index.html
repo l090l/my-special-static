@@ -77,9 +77,9 @@
         font-size: 15px;
     }
     
-    </style>
+</style>
 <head>
-<title>Special to You</title>
+    <title>Special to You</title>
 </head>
 <body>
 <section id="main">
@@ -94,16 +94,18 @@
         <div id="button">
             <a onclick="nameElement()">Show!</a>
         </div>
-        <div id="myDIV">
-            <iframe src="https://drive.google.com/file/d/1LXjDChvJQ1dgyL6nIwgvYR8Wq-0hIoFP/preview" width="640" height="480"></iframe>
+        <div id="myDIV" class="hidden">
+            <!-- <iframe src="https://drive.google.com/file/d/1LXjDChvJQ1dgyL6nIwgvYR8Wq-0hIoFP/preview" width="640" height="480"></iframe> -->
+            <video width="640" height="480" controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
-
 </section>
 
 <script>
     function nameElement() {
-  if (document.getElementById("name").value == "Good") {
+  if (document.getElementById("name").value == "good job") {
     const element = document.getElementById("myDIV");
     if (element.className == "hidden") {
         element.className = "visibility";
